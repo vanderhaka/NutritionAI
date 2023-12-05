@@ -1,15 +1,13 @@
-//
-//  NutritionAIApp.swift
-//  NutritionAI
-//
-//  Created by James Vanderhaak on 4/12/2023.
-//
-
 import SwiftUI
+import Firebase
 
 @main
 struct NutritionAIApp: App {
     let persistenceController = PersistenceController.shared
+
+    init() {
+        FirebaseApp.configure()  // Initialize Firebase
+    }
 
     var body: some Scene {
         WindowGroup {

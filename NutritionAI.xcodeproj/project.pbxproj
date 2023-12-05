@@ -16,6 +16,11 @@
 		9E7B43B62B1D98B9001C3C8B /* NutritionAITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B43B52B1D98B9001C3C8B /* NutritionAITests.swift */; };
 		9E7B43C02B1D98B9001C3C8B /* NutritionAIUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B43BF2B1D98B9001C3C8B /* NutritionAIUITests.swift */; };
 		9E7B43C22B1D98B9001C3C8B /* NutritionAIUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B43C12B1D98B9001C3C8B /* NutritionAIUITestsLaunchTests.swift */; };
+		9E7B43CF2B1D9918001C3C8B /* config.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E7B43CE2B1D9918001C3C8B /* config.plist */; };
+		9E7B43D22B1D99DD001C3C8B /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 9E7B43D12B1D99DD001C3C8B /* FirebaseAnalytics */; };
+		9E7B43D52B1DAB0B001C3C8B /* FirebaseStorage in Frameworks */ = {isa = PBXBuildFile; productRef = 9E7B43D42B1DAB0B001C3C8B /* FirebaseStorage */; };
+		9E7B43D72B1DAC1B001C3C8B /* OpenAIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E7B43D62B1DAC1B001C3C8B /* OpenAIService.swift */; };
+		9E7B43D92B1DB83C001C3C8B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 9E7B43D82B1DB83C001C3C8B /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,9 @@
 		9E7B43BB2B1D98B9001C3C8B /* NutritionAIUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NutritionAIUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E7B43BF2B1D98B9001C3C8B /* NutritionAIUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionAIUITests.swift; sourceTree = "<group>"; };
 		9E7B43C12B1D98B9001C3C8B /* NutritionAIUITestsLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NutritionAIUITestsLaunchTests.swift; sourceTree = "<group>"; };
+		9E7B43CE2B1D9918001C3C8B /* config.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = config.plist; sourceTree = "<group>"; };
+		9E7B43D62B1DAC1B001C3C8B /* OpenAIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OpenAIService.swift; sourceTree = "<group>"; };
+		9E7B43D82B1DB83C001C3C8B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +64,8 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9E7B43D22B1D99DD001C3C8B /* FirebaseAnalytics in Frameworks */,
+				9E7B43D52B1DAB0B001C3C8B /* FirebaseStorage in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -83,6 +93,7 @@
 				9E7B43B42B1D98B9001C3C8B /* NutritionAITests */,
 				9E7B43BE2B1D98B9001C3C8B /* NutritionAIUITests */,
 				9E7B439C2B1D98B2001C3C8B /* Products */,
+				9E7B43D32B1DAB0B001C3C8B /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -102,7 +113,10 @@
 				9E7B439E2B1D98B2001C3C8B /* NutritionAIApp.swift */,
 				9E7B43A02B1D98B2001C3C8B /* Persistence.swift */,
 				9E7B43A52B1D98B2001C3C8B /* ContentView.swift */,
+				9E7B43D62B1DAC1B001C3C8B /* OpenAIService.swift */,
 				9E7B43A72B1D98B9001C3C8B /* Assets.xcassets */,
+				9E7B43D82B1DB83C001C3C8B /* GoogleService-Info.plist */,
+				9E7B43CE2B1D9918001C3C8B /* config.plist */,
 				9E7B43A92B1D98B9001C3C8B /* NutritionAI.entitlements */,
 				9E7B43A22B1D98B2001C3C8B /* NutritionAI.xcdatamodeld */,
 				9E7B43AA2B1D98B9001C3C8B /* Preview Content */,
@@ -135,6 +149,13 @@
 			path = NutritionAIUITests;
 			sourceTree = "<group>";
 		};
+		9E7B43D32B1DAB0B001C3C8B /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -151,6 +172,10 @@
 			dependencies = (
 			);
 			name = NutritionAI;
+			packageProductDependencies = (
+				9E7B43D12B1D99DD001C3C8B /* FirebaseAnalytics */,
+				9E7B43D42B1DAB0B001C3C8B /* FirebaseStorage */,
+			);
 			productName = NutritionAI;
 			productReference = 9E7B439B2B1D98B2001C3C8B /* NutritionAI.app */;
 			productType = "com.apple.product-type.application";
@@ -223,6 +248,9 @@
 				Base,
 			);
 			mainGroup = 9E7B43922B1D98B2001C3C8B;
+			packageReferences = (
+				9E7B43D02B1D99DC001C3C8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+			);
 			productRefGroup = 9E7B439C2B1D98B2001C3C8B /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -240,7 +268,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				9E7B43AC2B1D98B9001C3C8B /* Preview Assets.xcassets in Resources */,
+				9E7B43D92B1DB83C001C3C8B /* GoogleService-Info.plist in Resources */,
 				9E7B43A82B1D98B9001C3C8B /* Assets.xcassets in Resources */,
+				9E7B43CF2B1D9918001C3C8B /* config.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -267,6 +297,7 @@
 			files = (
 				9E7B43A42B1D98B2001C3C8B /* NutritionAI.xcdatamodeld in Sources */,
 				9E7B439F2B1D98B2001C3C8B /* NutritionAIApp.swift in Sources */,
+				9E7B43D72B1DAC1B001C3C8B /* OpenAIService.swift in Sources */,
 				9E7B43A62B1D98B2001C3C8B /* ContentView.swift in Sources */,
 				9E7B43A12B1D98B2001C3C8B /* Persistence.swift in Sources */,
 			);
@@ -428,7 +459,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NutritionAI/Preview Content\"";
-				DEVELOPMENT_TEAM = 9Z9BPY33CE;
+				DEVELOPMENT_TEAM = VYDHLBS27B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -440,9 +471,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -450,7 +481,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamesvanderhaak.NutritionAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -466,7 +498,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"NutritionAI/Preview Content\"";
-				DEVELOPMENT_TEAM = 9Z9BPY33CE;
+				DEVELOPMENT_TEAM = VYDHLBS27B;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -478,9 +510,9 @@
 				"INFOPLIST_KEY_UILaunchScreen_Generation[sdk=iphonesimulator*]" = YES;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphoneos*]" = UIStatusBarStyleDefault;
 				"INFOPLIST_KEY_UIStatusBarStyle[sdk=iphonesimulator*]" = UIStatusBarStyleDefault;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = "@executable_path/Frameworks";
 				"LD_RUNPATH_SEARCH_PATHS[sdk=macosx*]" = "@executable_path/../Frameworks";
 				MACOSX_DEPLOYMENT_TARGET = 14.0;
@@ -488,7 +520,8 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.jamesvanderhaak.NutritionAI;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SDKROOT = auto;
-				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator macosx";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -545,6 +578,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9Z9BPY33CE;
@@ -567,6 +601,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				"CODE_SIGN_IDENTITY[sdk=macosx*]" = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 9Z9BPY33CE;
@@ -625,6 +660,30 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		9E7B43D02B1D99DC001C3C8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.18.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		9E7B43D12B1D99DD001C3C8B /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E7B43D02B1D99DC001C3C8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		9E7B43D42B1DAB0B001C3C8B /* FirebaseStorage */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 9E7B43D02B1D99DC001C3C8B /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseStorage;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		9E7B43A22B1D98B2001C3C8B /* NutritionAI.xcdatamodeld */ = {
